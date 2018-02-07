@@ -2,11 +2,11 @@
 A JavaScript library wrapping best of Observable and Request.
 No more, no less.
 
-It does only one thing - provides a possibility to execute http requests in reactive manner.
+It does only one thing and does it very well - provides a possibility to execute http requests in reactive manner.
 
 ## Examples:
 ```js
-const httpRx = require('httprx');
+const httpRx = require('http-rx');
 const userName = 'jasonrammoray';
 const url = `https://api.github.com/users/${userName}`;
 httpRx.get(url)
