@@ -11,7 +11,8 @@
     "lib",
     "package.json",
     "index.js",
-    "package-lock.json"
+    "package-lock.json",
+    "readme.md"
   ],
   "repository": {
     "type": "git",
