@@ -1,5 +1,5 @@
 {
-  "name": "RxHttp",
+  "name": "http-rx",
   "version": "1.0.0",
   "description": "A reactive http client based on Observable and Request",
   "main": "index.js",
