@@ -4,6 +4,9 @@ No more, no less.
 
 It does only one thing and does it very well - provides a possibility to execute http requests in reactive manner.
 
+It *does not* break http semantics.
+
+This means, that everything with status code less than 400 is considered to be a success and everything with status code more or equal to 400 is considered to be an error.
 ## Examples:
 ```js
 const httpRx = require('http-rx');
