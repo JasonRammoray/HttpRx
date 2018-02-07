@@ -1,0 +1,12 @@
+{
+  "extends":"google",
+  "rules": {
+    "no-tabs": "off",
+    "max-len": ["error", {"code": 120}],
+    "comma-dangle": "off",
+    "arrow-parens": "off"
+  },
+  "env": {
+    "es6": true
+  }
+}
