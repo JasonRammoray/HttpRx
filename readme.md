@@ -1,4 +1,5 @@
 ![Travis build](https://travis-ci.org/JasonRammoray/HttpRx.svg?branch=master)
+![Node security platform results](https://nodesecurity.io/orgs/webdev/projects/afc6da59-4ac8-43ea-8eb3-5c1b96e1c0f5/badge)
 ## RxHttp
 A JavaScript library wrapping best of Observable and Request.
 No more, no less.
