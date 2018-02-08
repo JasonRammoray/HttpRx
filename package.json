@@ -4,8 +4,9 @@
   "description": "A reactive http client based on Observable and Request",
   "main": "index.js",
   "scripts": {
-    "test": "",
-    "lint": "eslint ./**/*.js"
+    "test": "echo 'ok'",
+    "lint": "eslint ./**/*.js",
+    "qa": "npm run lint && npm run test"
   },
   "files": [
     "lib",
