@@ -18,3 +18,8 @@ httpRx.get(url)
 .finally(() => console.info('GitHub user data fetching procedure is done'))
 .subscribe(userEmail => console.log(`User email is ${userEmail}`));
 ```
+
+## Pull-requests
+Rules are simple:
+* cover your changes with tests
+* make sure, that your code complies with coding standards in the project
