@@ -4,7 +4,7 @@
   "description": "A reactive http client based on Observable and Request",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine-node ./tests --color --verbose --captureExceptions",
+    "test": "jasmine-node tests/specs --color --verbose --captureExceptions",
     "lint": "eslint ./**/*.js",
     "qa": "npm run lint && npm run test"
   },
@@ -40,6 +40,7 @@
   "devDependencies": {
     "eslint": "^4.17.0",
     "eslint-config-google": "^0.9.1",
+    "express": "^4.16.2",
     "jasmine-node": "^1.14.5"
   }
 }
