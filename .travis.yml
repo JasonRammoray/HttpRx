@@ -1,5 +1,5 @@
 language: node_js
-script: qa
+script: npm run qa
 cache:
   directories:
     - "node_modules"
