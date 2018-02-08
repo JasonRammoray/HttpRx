@@ -1,3 +1,4 @@
+![Travis build](https://travis-ci.org/JasonRammoray/HttpRx.svg?branch=master)
 ## RxHttp
 A JavaScript library wrapping best of Observable and Request.
 No more, no less.
@@ -23,5 +24,3 @@ httpRx.get(url)
 Rules are simple:
 * cover your changes with tests
 * make sure, that your code complies with coding standards in the project
-
-![Travis build](https://travis-ci.org/JasonRammoray/HttpRx.svg?branch=master)
