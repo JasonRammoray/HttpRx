@@ -1,6 +1,6 @@
 const nock = require('nock');
-const httpRx = require('../../index');
-const httpStatusCodes = require('../../lib/http-status-codes');
+const httpRx = require('../index');
+const httpStatusCodes = require('../lib/http-status-codes');
 const defaultOptions = {
 	json: true
 };
