@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/6be09fcb78891730bfc1/maintainability)](https://codeclimate.com/github/JasonRammoray/HttpRx/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6be09fcb78891730bfc1/test_coverage)](https://codeclimate.com/github/JasonRammoray/HttpRx/test_coverage)
 ![npm statistic](https://nodei.co/npm/http-rx.png?downloads=true&downloadRank=true&stars=true)
-## RxHttp
+## HttpRx
 A JavaScript library wrapping best of Observable and Request.
 No more, no less.
 
