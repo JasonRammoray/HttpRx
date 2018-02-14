@@ -9,7 +9,7 @@ describe('checkHttpMethod function ->', () => {
         });
     });
 
-    it(`should be able to detect an incorrect http method`, () => {
+    it('should be able to detect an incorrect http method', () => {
         const result = checkHttpMethod('incorrect_method');
         expect(result).toBe(false);
     });
