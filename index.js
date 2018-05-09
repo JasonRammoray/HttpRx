@@ -1,1 +1,1 @@
-module.exports = require('./lib/rx-http');
+module.exports = require('./lib/http-rx');
