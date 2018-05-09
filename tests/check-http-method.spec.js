@@ -15,7 +15,7 @@ describe('checkHttpMethod function ->', () => {
     });
 
     HTTP_METHODS.forEach(method => {
-        it(`should treat an uppercase versions of "${method}" method as an incorrect method`, () => {
+        it(`should treat an uppercase version of "${method}" method as an incorrect method`, () => {
             const result = checkHttpMethod(method.toUpperCase());
             expect(result).toBe(false);
         });
