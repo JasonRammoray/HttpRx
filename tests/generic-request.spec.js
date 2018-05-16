@@ -3,7 +3,9 @@ const genericRequest = require('../lib/generic-request');
 describe('HttpRx, generic request ->', () => {
     it('should throw an error observable, when calling it with non-existing HTTP method', done => {
         const methodName = 'WHATEVER-METHOD';
-        genericRequest(methodName).subscribe(null, err => {
+        const url = 'https://whatever.domain';
+        const options = {};
+        genericRequest(methodName, url, options).subscribe(null, err => {
             expect(err.message).toBe(`httpRx client was given an invalid method name for http request: ${methodName}`);
             done();
         });
