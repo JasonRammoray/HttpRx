@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/JasonRammoray/HttpRx#readme",
   "dependencies": {
-    "request": "^2.85.0",
+    "request": "^2.87.0",
     "rxjs": "^6.1.0"
   },
   "engines": {
@@ -40,7 +40,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
-    "jest": "^22.4.3",
-    "nock": "^9.2.5"
+    "jest": "^22.4.4",
+    "nock": "^9.2.6"
   }
 }
