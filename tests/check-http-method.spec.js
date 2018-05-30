@@ -13,4 +13,11 @@ describe('checkHttpMethod function ->', () => {
         const result = checkHttpMethod('incorrect_method');
         expect(result).toBe(false);
     });
+
+    HTTP_METHODS.forEach(method => {
+        it(`should treat an uppercase version of "${method}" method as an incorrect method`, () => {
+            const result = checkHttpMethod(method.toUpperCase());
+            expect(result).toBe(false);
+        });
+    });
 });

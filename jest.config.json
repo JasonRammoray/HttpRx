@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "bail": false,
+  "collectCoverageFrom": [
+    "lib/**/*.js"
+  ],
+  "collectCoverage": true
+}
