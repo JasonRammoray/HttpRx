@@ -1,4 +1,5 @@
 const nock = require('nock');
+const request = require('request');
 const genericRequest = require('../lib/generic-request');
 describe('HttpRx, generic request ->', () => {
     it('should throw an error observable, when calling it with non-existing HTTP method', done => {
@@ -19,5 +20,21 @@ describe('HttpRx, generic request ->', () => {
             done();
         });
         nock.enableNetConnect(url);
+    });
+    it('should cancel ongoing request, when unsubscribing from observable', () => {
+        const url = 'https://api.website.com';
+        nock(url)
+            .get('/')
+            .delay(2000)
+            .reply(200, {
+                message: 'ok'
+            });
+        const spy = jest.spyOn(request.Request.prototype, 'abort');
+        const subscription = genericRequest('get', url, {}).subscribe(null, null);
+        expect(spy).not.toHaveBeenCalled();
+        subscription.unsubscribe();
+        expect(spy).toHaveBeenCalled();
+        spy.mockRestore();
+        nock.cleanAll();
     });
 });
