@@ -1,6 +1,8 @@
 const nock = require('nock');
+const request = require('request');
 const genericRequest = require('../lib/generic-request');
 describe('HttpRx, generic request ->', () => {
+    afterEach(() => nock.cleanAll());
     it('should throw an error observable, when calling it with non-existing HTTP method', done => {
         const methodName = 'WHATEVER-METHOD';
         const url = 'https://whatever.domain';
@@ -19,5 +21,28 @@ describe('HttpRx, generic request ->', () => {
             done();
         });
         nock.enableNetConnect(url);
+    });
+    it('should cancel ongoing request, when unsubscribing from observable', done => {
+        const url = 'https://api.website.com';
+        nock(url)
+            .get('/')
+            .delay(2000)
+            .reply(200, {
+                message: 'ok'
+            });
+        const spy = jest.spyOn(request.Request.prototype, 'abort');
+        const subscription = genericRequest('get', url, {}).subscribe(null, null);
+
+        /*
+         * In real world scenario request cancelling happens
+         * after some time, hence adding a delay to emulate
+         * that.
+         */
+        setTimeout(() => {
+            subscription.unsubscribe();
+            expect(spy).toHaveBeenCalled();
+            spy.mockRestore();
+            done();
+        }, 20);
     });
 });
