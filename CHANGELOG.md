@@ -1,3 +1,7 @@
+# 1.1.1
+* Improved test coverage (a unit test, which checks request cancellation possibility)
+* updated a packages to their latest versions
+
 # 1.1.0
 * Migrated from jasmine-node to jest
 * Improved code coverage
