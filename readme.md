@@ -11,12 +11,13 @@ It does only one thing and does it very well - provides a possibility to execute
 
 It *does not* break http semantics.
 
-See live demo [*HERE*](https://runkit.com/jasonrammoray/5a8141d8ac0ed40013fd9054).
+See live demo [*HERE*](https://runkit.com/l2jliga/5b2c00bf17259600121348f2).
 
 This means, that everything with status code less than 400 is considered to be a success and everything with status code more or equal to 400 is considered to be an error.
 ## Examples
 ```js
 const httpRx = require('http-rx');
+const { map, catchError, finalize } = require('rxjs/operators');
 const userName = 'jasonrammoray';
 const url = `https://api.github.com/users/${userName}`;
 httpRx.get(url, {
@@ -25,9 +26,11 @@ httpRx.get(url, {
     },
     json: true
 })
-.map(data => data.body.bio)
-.catch(error => console.error('Can not obtain user data, because: ', error))
-.finally(() => console.info('GitHub user data fetching procedure is done'))
+.pipe(
+    map(data => data.body.bio),
+    catchError(error => console.error('Can not obtain user data, because: ', error)),
+    finalize(() => console.info('GitHub user data fetching procedure is done'))
+)
 .subscribe(userBio => console.log(`GitHub user bio is: ${userBio}`));
 ```
 
