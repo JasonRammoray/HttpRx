@@ -1,3 +1,6 @@
+# 2.0.0
+* Rewritten README to reflect a new way of using http-rx since chain api is no longer available in RxJs 6. Your code will __BREAK__ if you have chain api somewhere (e.g. .map(...).finally(...).catch(...))
+
 # 1.1.1
 * Improved test coverage (a unit test, which checks request cancellation possibility)
 * updated a packages to their latest versions
