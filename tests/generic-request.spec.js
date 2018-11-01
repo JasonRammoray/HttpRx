@@ -17,7 +17,7 @@ describe('HttpRx, generic request ->', () => {
     const url = 'https://google.com';
     nock.disableNetConnect(url);
     genericRequest(methodName, url).subscribe(null, err => {
-      expect(err.message).toBe('Nock: Not allow net connect for \"google.com:443/\"');
+      expect(err.message).toBe('Nock: Disallowed net connect for \"google.com:443/\"');
       done();
     });
     nock.enableNetConnect(url);
