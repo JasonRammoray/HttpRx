@@ -1,4 +1,4 @@
-# 2.0.1
+# 2.0.5
 Updated npm packages to their latest versions according to the security audit.
 
 # 2.0.0
