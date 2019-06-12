@@ -1,3 +1,6 @@
+# 2.0.1
+Updated npm packages to their latest versions according to the security audit.
+
 # 2.0.0
 * Rewritten README to reflect a new way of using http-rx since chain api is no longer available in RxJs 6. Your code will __BREAK__ if you have chain api somewhere (e.g. .map(...).finally(...).catch(...))
 
