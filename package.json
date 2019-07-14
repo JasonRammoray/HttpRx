@@ -38,8 +38,8 @@
     "node": ">= 8"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-google": "^0.11.0",
+    "eslint": "^6.0.1",
+    "eslint-config-google": "^0.13.0",
     "jest": "^24.8.0",
     "nock": "^10.0.6"
   }
