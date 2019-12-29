@@ -1,3 +1,6 @@
+# 2.0.8
+Bump handlebars from 4.2.0 to 4.5.3
+
 # 2.0.6
 Updated npm packages to their latest versions according to the security audit.
 
