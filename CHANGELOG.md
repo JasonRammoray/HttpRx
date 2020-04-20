@@ -1,3 +1,6 @@
+# 2.1.0
+Fix the security issues among the dependencies.
+
 # 2.0.8
 Bump handlebars from 4.2.0 to 4.5.3
 
