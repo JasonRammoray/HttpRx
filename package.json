@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --config=jest.config.json",
-    "lint": "eslint ./**/*.js",
+    "lint": "eslint . --ext .js",
     "qa": "npm run lint && npm run test"
   },
   "files": [
@@ -35,12 +35,12 @@
     "rxjs": "^6.5.5"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 10"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^8.4.1",
     "eslint-config-google": "^0.14.0",
-    "jest": "^24.9.0",
+    "jest": "^27.4.5",
     "nock": "^11.9.1"
   }
 }

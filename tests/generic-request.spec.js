@@ -26,7 +26,7 @@ describe('HttpRx, generic request ->', () => {
     const url = 'https://api.website.com';
     nock(url)
         .get('/')
-        .delay(2000)
+        .delay(120)
         .reply(200, {
           message: 'ok'
         });
