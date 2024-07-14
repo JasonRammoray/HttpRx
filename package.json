@@ -1,6 +1,6 @@
 {
   "name": "http-rx",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "A reactive http client based on Observable and Request",
   "main": "index.js",
   "scripts": {
